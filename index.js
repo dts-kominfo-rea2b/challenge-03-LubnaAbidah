@@ -20,12 +20,27 @@ const dataBelanjaan = [
   },
 ];
 
-// boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = null;
+const myObj = dataBelanjaan;
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = null;
+const listBelanjaan = belanjaan => {
+    return belanjaan.map(belanja =>`- ${belanja.nama} x ${belanja.kuantitas}`)
+};
 
+
+// boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
+//const totalBelanjaan = null;
+const hargaBelanjaan = function(harga, kuantitas){
+  return harga * kuantitas;
+}
+
+const hargaBelanjaan1 = hargaBelanjaan(myObj[0].harga,myObj[0].kuantitas);
+const hargaBelanjaan2 = hargaBelanjaan(myObj[1].harga,myObj[1].kuantitas);
+const hargaBelanjaan3 = hargaBelanjaan(myObj[2].harga,myObj[2].kuantitas);
+
+let totalBelanjaan = () => {
+    return hargaBelanjaan1 + hargaBelanjaan2 + hargaBelanjaan3;
+}
 // ! JANGAN DIMODIFIKASI
 const main = () => {
   console.log("Selamat datang customer");
