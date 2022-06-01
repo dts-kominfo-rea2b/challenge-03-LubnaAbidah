@@ -27,7 +27,7 @@ const listBelanjaan = belanjaan => {
     return belanjaan.map(belanja =>`- ${belanja.nama} x ${belanja.kuantitas}`)
 };
 
-const hargaBelanjaan = total => {
+const totalBelanjaan = total => {
     return total.map(total => total.harga * total.kuantitas)
 };
 
