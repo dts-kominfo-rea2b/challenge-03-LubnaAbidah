@@ -35,10 +35,6 @@ const hargaBelanjaan = total => {
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
 //const totalBelanjaan = null;
 
-
-let totalBelanjaan = () => {
-    return hargaBelanjaan1 + hargaBelanjaan2 + hargaBelanjaan3;
-}
 // ! JANGAN DIMODIFIKASI
 const main = () => {
   console.log("Selamat datang customer");
