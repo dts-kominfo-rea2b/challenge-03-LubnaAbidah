@@ -30,10 +30,9 @@ const hargaTotal = total => {
     return total.map(total => total.harga * total.kuantitas)
 };
 
-var totalBelanjaan = 0;
-for(i = 0; i <hargaTotal.length; i++){
-  return totalBelanjaan += hargaTotal[i];
-}
+const totalBelanjaan = dataBelanjaan.reduce((hargaSebelumnya, hargaSaatIni) => {
+  return hargaSebelumnya + hargaSaatIni.hargaTotal;
+}, 0);
 
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
