@@ -26,13 +26,17 @@ const listBelanjaan = belanjaan => {
     return belanjaan.map(belanja =>`- ${belanja.nama} x ${belanja.kuantitas}`)
 };
 
-const hargaTotal = total => {
+/* const hargaTotal = total => {
     return total.map(total => total.harga * total.kuantitas)
-};
+}; */
 
-const totalBelanjaan = dataBelanjaan.reduce((hargaSebelumnya, hargaSaatIni) => {
-  return hargaSebelumnya + hargaSaatIni.hargaTotal;
-}, 0);
+const totalBelanjaan = dataBelanjaan => {
+    let i = 0;
+    for(i = 0; i < dataBelanjaan.length; i++) {
+    hargaTotal += dataBelanjaan[i].harga * dataBelanjaan[i].kuantitas
+    }
+    return hargaTotal
+};
 
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
