@@ -20,20 +20,21 @@ const dataBelanjaan = [
   },
 ];
 
-const myObj = dataBelanjaan;
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
 const listBelanjaan = belanjaan => {
     return belanjaan.map(belanja =>`- ${belanja.nama} x ${belanja.kuantitas}`)
 };
 
-const totalBelanjaan = total => {
+const hargaTotal = total => {
     return total.map(total => total.harga * total.kuantitas)
 };
 
+const totalBelanjaan = hargaTotal.reduce(function(total, nilai) {
+    return total + nilai;
+});
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-//const totalBelanjaan = null;
 
 // ! JANGAN DIMODIFIKASI
 const main = () => {
