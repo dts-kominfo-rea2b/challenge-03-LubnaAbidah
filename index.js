@@ -30,7 +30,7 @@ const listBelanjaan = belanjaan => {
     return total.map(total => total.harga * total.kuantitas)
 }; */
 
-const totalBelanjaan = dataBelanjaan => {
+const totalBelanjaan = (dataBelanjaan) => {
     let i = 0;
     for(i = 0; i < dataBelanjaan.length; i++) {
     hargaTotal += dataBelanjaan[i].harga * dataBelanjaan[i].kuantitas
