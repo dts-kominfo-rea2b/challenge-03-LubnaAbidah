@@ -31,7 +31,7 @@ const listBelanjaan = belanjaan => {
 }; */
 
 const totalBelanjaan = (dataBelanjaan) => {
-    let i = 0;
+    let hargaTotal = 0;
     for(i = 0; i < dataBelanjaan.length; i++) {
     hargaTotal += dataBelanjaan[i].harga * dataBelanjaan[i].kuantitas
     }
