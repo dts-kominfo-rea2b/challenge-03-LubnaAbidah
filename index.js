@@ -32,7 +32,7 @@ const hargaTotal = total => {
 
 var totalBelanjaan = 0;
 for(i = 0; i <hargaTotal.length; i++){
-   totalBelanjaan += hargaTotal[i];
+  return totalBelanjaan += hargaTotal[i];
 }
 
 
