@@ -30,7 +30,7 @@ const hargaTotal = total => {
     return total.map(total => total.harga * total.kuantitas)
 };
 
-const totalBelanjaan = 0;
+var totalBelanjaan = 0;
 for(i = 0; i <hargaTotal.length; i++){
    totalBelanjaan += hargaTotal[i];
 }
